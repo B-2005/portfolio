@@ -680,7 +680,7 @@
             <div class="heroMeta">
               <div class="mini">
                 <div class="label"><i class="fa-solid fa-clipboard-check"></i> Projects Completed</div>
-                <div class="value"><span id="projectCount">2</span> <small>AI/ML projects</small></div>
+                <div class="value"><span id="projectCount">4</span> <small>AI/ML projects</small></div>
               </div>
               <div class="mini">
                 <div class="label"><i class="fa-solid fa-graduation-cap"></i> Focus</div>
@@ -824,7 +824,7 @@
         <div class="sectionTitle">
           <div>
             <h2>Featured Projects</h2>
-            <p>Two projects built during the AI/ML workshop (Colab → GitHub).</p>
+            <p>Four projects built during the AI/ML workshop and through self-driven Computer Vision practice (Colab → GitHub).</p>
           </div>
           <span class="chip"><i class="fa-solid fa-star"></i> Portfolio highlights</span>
         </div>
@@ -913,6 +913,85 @@
                 <i class="fa-solid fa-file-code"></i> Notebook Link
               </a>
               <a class="btn small ghost" href="#" target="_blank" rel="noopener" id="p2Repo">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card projectCard revealOnScroll">
+            <div class="projectHeader">
+              <div class="cardTop">
+                <div class="cardIcon"><i class="fa-solid fa-camera" style="color:var(--accent2);"></i></div>
+              </div>
+                  <h3 style="margin:0;">Project 3: Real-Time Face Detection</h3>
+            </div>
+            <div class="projectBody">
+              <p>
+                A real-time computer vision project built with <b>OpenCV</b> that uses the Haar Cascade classifier
+                to detect human faces live from the webcam. Draws green bounding boxes around each detected face
+                and displays a live face count on screen.
+              </p>
+              <ul>
+                <li>Live webcam feed with rectangle overlay per detected face</li>
+                <li>Face count displayed in real time on the video frame</li>
+                <li>Hotkey support — <code>S</code> to save a snapshot, <code>Q</code> to quit</li>
+                <li>Uses OpenCV's built-in Haar Cascade XML model</li>
+                <li>Tunable parameters: <code>scaleFactor</code>, <code>minNeighbors</code></li>
+              </ul>
+              <div class="tags" style="margin-top:10px;">
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Haar Cascade</span>
+                <span class="tag">Real-Time</span>
+              </div>
+            </div>
+            <div class="projectActions">
+              <a class="btn small primary" href="#" target="_blank" rel="noopener" id="p3Notebook">
+                <i class="fa-solid fa-file-code"></i> Source Code
+              </a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener" id="p3Repo">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="card projectCard revealOnScroll">
+            <div class="projectHeader">
+              <div class="cardTop">
+                <div class="cardIcon"><i class="fa-solid fa-face-smile" style="color:var(--warn);"></i></div>
+              </div>
+                  <h3 style="margin:0;">Project 4: Real-Time Emotion Detection</h3>
+            </div>
+            <div class="projectBody">
+              <p>
+                A real-time emotion recognition system that classifies 7 human emotions — <b>Angry, Disgust, Fear,
+                Happy, Sad, Surprise, Neutral</b> — directly from a live webcam feed. Uses a custom deep learning
+                model (Keras <code>.hdf5</code>) combined with OpenCV face detection.
+              </p>
+              <ul>
+                <li>Detects faces in real time, then classifies emotion per face</li>
+                <li>7-class emotion output displayed as text overlay above each face</li>
+                <li>Preprocesses grayscale ROI to 64×64 pixels for model input</li>
+                <li>Built without DeepFace — uses a custom-trained CNN via TensorFlow/Keras</li>
+                <li>Uses NumPy for image normalization and prediction handling</li>
+              </ul>
+              <div class="tags" style="margin-top:10px;">
+                <span class="tag">Python</span>
+                <span class="tag">TensorFlow / Keras</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">CNN</span>
+                <span class="tag">Real-Time AI</span>
+              </div>
+            </div>
+            <div class="projectActions">
+              <a class="btn small primary" href="#" target="_blank" rel="noopener" id="p4Notebook">
+                <i class="fa-solid fa-file-code"></i> Source Code
+              </a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener" id="p4Repo">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
@@ -1066,6 +1145,10 @@
       project2Repo: "https://github.com/B-2005/Ardent_AI_ML_TRANING/tree/main/project_2", // <-- replace
       project1Notebook: "https://github.com/B-2005/Ardent_AI_ML_TRANING/blob/main/project-1/Project_1_(EDA).ipynb", // <-- add Colab/GitHub notebook link
       project2Notebook: "https://github.com/B-2005/Ardent_AI_ML_TRANING/blob/main/project_2/Project_2.ipynb", // <-- add Colab/GitHub notebook link
+      project3Repo: "#", // <-- add GitHub repo link for face detection
+      project3Code: "#", // <-- add source code link for face detection
+      project4Repo: "#", // <-- add GitHub repo link for emotion detection
+      project4Code: "#", // <-- add source code link for emotion detection
       email: "bhowmikbishl33@email.com" // <-- replace
     };
 
@@ -1079,6 +1162,10 @@
     $("p2Repo").href = LINKS.project2Repo;
     $("p1Notebook").href = LINKS.project1Notebook;
     $("p2Notebook").href = LINKS.project2Notebook;
+    $("p3Repo").href = LINKS.project3Repo;
+    $("p3Notebook").href = LINKS.project3Code;
+    $("p4Repo").href = LINKS.project4Repo;
+    $("p4Notebook").href = LINKS.project4Code;
 
     $("emailBtn").href = `mailto:${LINKS.email}`;
 
@@ -1097,8 +1184,10 @@
       "EDA dashboards 📊",
       "Linear Regression models 🧠",
       "Python notebooks in Colab 💻",
+      "Real-time Face Detection 📷",
+      "Emotion Detection with Deep Learning 🤖",
       "AI automation ideas ⚙️",
-      "LLM-powered apps (learning) 🤖"
+      "LLM-powered apps (learning) 🚀"
     ];
     const target = $("typeTarget");
     let p = 0, i = 0, deleting = false;
